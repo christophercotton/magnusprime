@@ -45,3 +45,14 @@ for( var i = 0; i < instance_number(obj_star); i += 1) {
 		current.targeted_tower.incoming_power += current.strength;	
 	}
 }
+
+if (!global.all_towers) {
+	for( var i = 0; i < instance_number(obj_star); i += 1) {
+		var current = instance_find(obj_star, i);	
+		if (current.tower != 1) {
+			return;
+		}
+	}
+	
+	global.all_towers = true
+}

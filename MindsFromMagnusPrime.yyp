@@ -552,6 +552,25 @@
             }
         },
         {
+            "Key": "fbb8cafc-721f-4b7c-ac48-07458a45bf6a",
+            "Value": {
+                "id": "f9ff0219-d10b-48a5-b003-ac4e704601c5",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_engine_idle\/snd_engine_idle.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "fc1eae4b-2b2c-4145-a558-9d639b382e5c",
             "Value": {
                 "id": "03e7fa0a-5d8e-4118-bf42-f575231825af",

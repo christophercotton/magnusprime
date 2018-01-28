@@ -7,3 +7,4 @@
 	defx = 15
 	defy = 15
 	
+global.all_towers = false;

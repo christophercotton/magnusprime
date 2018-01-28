@@ -15,3 +15,14 @@ if (player1.AIM || player2.AIM) {
 	audio_stop_sound(snd_tower_rotate);	
 	
 }
+
+
+if (player1.MOVEX != 0 || player1.MOVEY != 0 || player2.MOVEX != 0 || player2.MOVEY != 0  ) {
+	if (!audio_is_playing(snd_engine_idle)) {
+		audio_play_sound(snd_engine_idle, 10, true);	
+	}
+	
+} else {
+	audio_stop_sound(snd_engine_idle);	
+	
+}
