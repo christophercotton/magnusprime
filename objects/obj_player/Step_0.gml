@@ -22,6 +22,9 @@ if (FIRE || AIM) {
 			}
 		} else {
 			// AIMing
+			if (inst.tower == 0) {
+				return;	
+			}
 			
 			if (MOVELEFT) {
 				inst.tower_angle -= 1;
