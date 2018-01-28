@@ -1,3 +1,6 @@
+MOVEX = 0
+MOVEY = 0
+
 
 if (playerNum == 1) {
 	//Shortcuts for keypresses
@@ -18,6 +21,18 @@ if (playerNum == 1) {
 	} else {
 		AIMRIGHT = false;	
 	}
+	
+	if (MOVELEFT) {
+		MOVEX = -1;	
+	} else if (MOVERIGHT) {
+		MOVEX = 1;
+	}
+	
+	if (MOVEUP) {
+		MOVEY = -1;
+	} else if (MOVEDOWN) {
+		MOVEY = 1;
+	}
 
 } else {
 	//Shortcuts for keypresses
@@ -26,26 +41,35 @@ if (playerNum == 1) {
 	MOVEUP = keyboard_check(ord("W"));
 	MOVEDOWN = keyboard_check(ord("S"));
 	FIRE = keyboard_check_pressed(vk_space);		
-	AIM = keyboard_check(ord("C"));		
+	AIM = keyboard_check(ord("C"));	
+	
+	if (MOVELEFT) {
+		MOVEX = -1;	
+	} else if (MOVERIGHT) {
+		MOVEX = 1;
+	}
+	
+	if (MOVEUP) {
+		MOVEY = -1;
+	} else if (MOVEDOWN) {
+		MOVEY = 1;
+	}
+
 }
 
 var device = playerNum - 1;
 if (gamepad_is_connected(device)) {
 	if (gamepad_axis_value(device, gp_axislh) < -0.2) {
-		MOVELEFT = true
-		MOVERIGHT = false
+		MOVEX = gamepad_axis_value(device, gp_axislh)
 	} else if (gamepad_axis_value(device, gp_axislh) > 0.2) {
-		MOVELEFT = false
-		MOVERIGHT = true
+		MOVEX = gamepad_axis_value(device, gp_axislh);
 	}
 
 
 	if (gamepad_axis_value(device, gp_axislv) < -0.2) {
-		MOVEUP = true
-		MOVEDOWN = false
+		MOVEY = gamepad_axis_value(device, gp_axislv);
 	} else if (gamepad_axis_value(device, gp_axislv) > 0.2) {
-		MOVEUP = false
-		MOVEDOWN = true
+		MOVEY = gamepad_axis_value(device, gp_axislv);
 	}
 	
 	AIMRIGHT = gamepad_button_value(device, gp_shoulderrb);
@@ -56,26 +80,34 @@ if (gamepad_is_connected(device)) {
 }
 
 
+
 if (!AIM) {
-	//Move Player
-	if (MOVELEFT && x > 0) 
-	{ 
-	    x -= playerSpeed; 
+
+	if (MOVEX == 0 && MOVEY == 0) {
+		return;
+	}
+	
+	MOVE_FACTOR = 2.5;
+	
+	image_angle = point_direction(0, 0, -MOVEX, -MOVEY) + 90;
+	
+	if (MOVEX != 0) {
+		x += MOVEX * MOVE_FACTOR;	
+		if (x < 0) {
+			x = 0;	
+		} else if (x > room_width - sprite_width) {
+			x = room_width - sprite_width;	
+		}
+	}
+	
+	if (MOVEY != 0) {
+		y += MOVEY * MOVE_FACTOR;	
+		if (y < 0) {
+			y = 0;	
+		} else if (y > room_height - sprite_height) {
+			y = room_height - sprite_height;	
+		}
 	}
 
-	if (MOVERIGHT && x < room_width - sprite_width) 
-	{ 
-	    x += playerSpeed; 
-	}
-
-	if (MOVEUP && y > 0) 
-	{ 
-	    y -= playerSpeed; 
-	}
-
-	if (MOVEDOWN && y < room_height - sprite_height) 
-	{ 
-	    y += playerSpeed; 
-	}
 }
 // show_debug_message("room_width " + string(room_width) + " room_height " + string(room_height) + "  " + string(x) + ", " + string(y));
