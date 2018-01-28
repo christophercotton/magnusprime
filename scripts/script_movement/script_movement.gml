@@ -51,6 +51,8 @@ if (gamepad_is_connected(device)) {
 	AIMRIGHT = gamepad_button_value(device, gp_shoulderrb);
 	AIMLEFT = gamepad_button_value(device, gp_shoulderlb);
 	AIM = AIMRIGHT || AIMLEFT;
+	
+	FIRE = gamepad_button_check_pressed(device, gp_face1)
 }
 
 
