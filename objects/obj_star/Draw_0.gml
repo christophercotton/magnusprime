@@ -8,7 +8,7 @@ if (tower == 1) {
 	
 	draw_set_alpha(1.0);
 	draw_set_color(c_red);
-	draw_line(x, y, x_draw, y_draw);
+	draw_line(x, y, endx, endy);
 	image_blend = c_red;
 } else {
 	if (incoming_power >= strength) {

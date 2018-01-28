@@ -96,6 +96,25 @@
             }
         },
         {
+            "Key": "1e78e0cf-9ecf-4142-9aba-8023a347adc9",
+            "Value": {
+                "id": "2006bff1-40a3-401c-ae1d-f414f7a985f1",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_tower_rotate\/snd_tower_rotate.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "258817c0-8108-4c0a-bab2-574842bb2369",
             "Value": {
                 "id": "2fc48a8c-d563-4adc-bb7d-f63f1d55127f",
@@ -343,6 +362,25 @@
             }
         },
         {
+            "Key": "aa251844-397b-4bda-bc16-3c099f3a2167",
+            "Value": {
+                "id": "394800b8-3d15-4f44-bd6a-bb2af7d4306f",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "objects\/Timer\/Timer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b2e6a5d6-e045-44be-ada5-e75cef18714b",
             "Value": {
                 "id": "82a5da33-744a-4621-94f8-55f974fba1a7",
@@ -378,6 +416,25 @@
                 ],
                 "resourcePath": "sprites\/sprite_ship\/sprite_ship.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "cdd81193-fac6-47b3-bd8f-b22c4c0ef393",
+            "Value": {
+                "id": "dc6865d3-823c-4bd4-9492-d6bc5afa0430",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_destroy_tower\/snd_destroy_tower.yy",
+                "resourceType": "GMSound"
             }
         },
         {
@@ -435,6 +492,25 @@
                 ],
                 "resourcePath": "scripts\/script_update_tower\/script_update_tower.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "eeb945aa-97e2-4eb9-aabf-4c3bb432e1d3",
+            "Value": {
+                "id": "c292abe8-396b-4633-9e70-9931213d58bb",
+                "modelName": "GMResourceInfo",
+                "mvc": "1.0",
+                "configDeltaFiles": [
+                    
+                ],
+                "configDeltas": [
+                    
+                ],
+                "resourceCreationConfigs": [
+                    "default"
+                ],
+                "resourcePath": "sounds\/snd_build_tower\/snd_build_tower.yy",
+                "resourceType": "GMSound"
             }
         },
         {

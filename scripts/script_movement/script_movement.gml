@@ -71,11 +71,9 @@ if (gamepad_is_connected(device)) {
 	} else if (gamepad_axis_value(device, gp_axislv) > 0.2) {
 		MOVEY = gamepad_axis_value(device, gp_axislv);
 	}
-	
 	AIMRIGHT = gamepad_button_value(device, gp_shoulderrb);
 	AIMLEFT = gamepad_button_value(device, gp_shoulderlb);
 	AIM = AIMRIGHT || AIMLEFT;
-	
 	FIRE = gamepad_button_check_pressed(device, gp_face1)
 }
 

@@ -6,8 +6,8 @@ with(star) {
 	x_draw = x + 100 * strength * dcos(tower_angle);
 	y_draw = y + 100 * strength * dsin(tower_angle);
 	targeted_tower = collision_line(x, y, x_draw, y_draw, obj_star, false, true);
-	var endx = x_draw;
-	var endy = y_draw;
+	endx = x_draw;
+	endy = y_draw;
 	var deltax = x_draw - x;
 	var deltay = y_draw - y;
 	if (targeted_tower != noone) {

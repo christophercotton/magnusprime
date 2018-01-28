@@ -7,4 +7,7 @@ targeted_tower = noone;
 
 x_draw = 0;
 y_draw = 0;
+endx = 0;
+endy = 0;
 incoming_power = 0;
+num_active = 1;
