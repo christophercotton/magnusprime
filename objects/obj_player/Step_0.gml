@@ -15,10 +15,12 @@ if (FIRE || AIM) {
 		if (FIRE) {
 			if (inst.tower == 1) {
 				inst.tower = 0;
-			} else {
-				inst.tower = 1;	
 				script_update_tower(inst)
-
+			} else {
+				if (inst.incoming_power >= inst.strength) {
+					inst.tower = 1;	
+					script_update_tower(inst)
+				}
 			}
 		} else {
 			// AIMing

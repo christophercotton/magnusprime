@@ -3,7 +3,7 @@
 
 if (tower == 1) {
 	draw_set_color(c_aqua);
-	draw_set_alpha(0.1);
+	draw_set_alpha(0.2);
 	draw_circle(x, y, 50 * strength, false);	
 	
 	draw_set_alpha(1.0);

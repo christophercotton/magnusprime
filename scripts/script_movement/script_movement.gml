@@ -5,7 +5,7 @@ if (playerNum == 1) {
 	MOVERIGHT = keyboard_check(vk_right);
 	MOVEUP = keyboard_check(vk_up);
 	MOVEDOWN = keyboard_check(vk_down);
-	FIRE = keyboard_check(ord("/"));
+	FIRE = keyboard_check_pressed(191); // slash /
 	AIM = keyboard_check(vk_rshift);	
 	
 } else {
@@ -14,7 +14,7 @@ if (playerNum == 1) {
 	MOVERIGHT = keyboard_check(ord("D"));
 	MOVEUP = keyboard_check(ord("W"));
 	MOVEDOWN = keyboard_check(ord("S"));
-	FIRE = keyboard_check(vk_space);		
+	FIRE = keyboard_check_pressed(vk_space);		
 	AIM = keyboard_check(ord("C"));		
 }
 
